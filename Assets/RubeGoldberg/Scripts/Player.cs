@@ -63,7 +63,6 @@ public class Player : MonoBehaviour
 			rigidbody.position = Vector3.Lerp(startPosition, teleportLocation, lerpDistance); // calculate lerp by framerate for smooth movement
 			if(lerpDistance >= 1)
 			{
-				///rigidbody.position = teleportLocation;
 				transform.position = teleportLocation;
 				isMoving = false;
 				rigidbody.isKinematic = false; // make player collider with objects again after teleporting
@@ -82,7 +81,6 @@ public class Player : MonoBehaviour
 		Vector3 direction = camera.transform.TransformDirection(joystickDirection);
 		direction = new Vector3(direction.x, 0, direction.z);
 		direction = direction * GL.moveSpeed * Time.deltaTime; // move player with certain speed set in gamelogic and framte rate
-		///rigidbody.position += direction;
 		transform.position += direction;
 	}
 
@@ -126,11 +124,8 @@ public class Player : MonoBehaviour
 	{
 		if(rigidbody.velocity.magnitude >= GL.maxPlayerVelocity) // this is to limit player speed, to reduce VR sickness
 		{
-			///Debug.Log("Player velocirt was: " + rigidbody.velocity.magnitude);
 			rigidbody.velocity = rigidbody.velocity.normalized * GL.maxPlayerVelocity;
-			///Debug.Log(": Corrected to " + rigidbody.velocity.magnitude);
 		}
-		///AdjustPlayerWithCamera();
 	}
     
 }

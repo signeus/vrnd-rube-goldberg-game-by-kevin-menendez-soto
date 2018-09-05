@@ -13,7 +13,7 @@
 	- LICENSE
 
 - Versions:
-	- Unity: **2018.2.0f3**
+	- Unity: **2018.1.0f2**
 	- Oculus Utilities: **3.4.1**
 	- Oculus Platform Tools: **1.20.0**
 	- Oculus Avatar: **1.20.0**

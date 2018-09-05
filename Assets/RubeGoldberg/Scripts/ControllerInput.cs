@@ -88,7 +88,8 @@ public class ControllerInput : MonoBehaviour
 					TeleportLocation_SetActive(true);
 				}
 				else // if ray hits something, check the ground
-					GroundRay(hit.point, true);
+                    if(hit.transform.tag != "CannotTeleport")
+					    GroundRay(hit.point, true);
 			}
 			else // if ray doesnt hit anything, check ground at the end or ray
 			{
@@ -234,7 +235,7 @@ public class ControllerInput : MonoBehaviour
 		RaycastHit groundHit;
 		if(Physics.Raycast(startPoint, -Vector3.up, out groundHit, GL.rayRange, GL.rayMask))
 		{
-			if(isButtonPress)
+			if(isButtonPress && groundHit.transform.tag != "CannotTeleport")
 			{
 				if(teleportLocation_GO != null)
 					teleportLocation_GO.transform.position = groundHit.point;
