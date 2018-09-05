@@ -32,6 +32,7 @@
 		- [FreeSound.org](https://freesound.org/)
 	- Models and Textures
 		- Udacity example
+		- [Engagement Ring (For the Portal)] (https://free3d.com/3d-model/engagement-ring-32752.html)
 
 - Github
 	- [Signeus / Rube Goldberg Game](https://github.com/signeus/vrnd-rube-goldberg-game-by-kevin-menendez-soto)
