@@ -44,8 +44,6 @@ public class ControllerInput : MonoBehaviour
 		ray.gameObject.SetActive(false);
 		GL.L_controller_GO.GetComponent<ControllerCollision>().Init();
 		GL.R_controller_GO.GetComponent<ControllerCollision>().Init();
-		/*L_holdingObject = null;
-		R_holdingObject = null;*/
 
 		isMenuOpen = false;
 		objSpawnMenu_GO = GameObject.Find("ObjSpawnMenu_UI");
